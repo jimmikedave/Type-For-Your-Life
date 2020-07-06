@@ -15,7 +15,9 @@ resetButton.addEventListener('click', e => game.startGame())
 document.addEventListener('keydown', e => {
      for(i = 0; i< keyboard.length; i += 1)
     if (e.key === keyboard[i].textContent) {
-        console.log(keyboard[i].textContent)
+        game.inputArray(keyboard[i].textContent)
+     } else if (e.key === " " && keyboard[i].textContent === " ") {
+        game.inputArray(keyboard[i].textContent)
      }
  })    
 
