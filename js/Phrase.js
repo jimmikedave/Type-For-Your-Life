@@ -9,8 +9,6 @@ class Phrase {
         selectedPhrase.textContent = this.phrase;
     }
 
-    //Create a function that displays the keyboard input
-
-    //Create a function to check if the input matches the phrase
+    //Reset the phrase if round won
 
 }

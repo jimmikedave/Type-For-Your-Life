@@ -8,6 +8,7 @@ class Game {
             {phrase: 'console log'}
         ];
         this.input = [];
+        this.rounds = 0;
         this.activePhrase = null;
     }
 
@@ -38,12 +39,56 @@ class Game {
         const keyInput = document.getElementById('keyInput');
         
         keyInput.textContent = typedInput;
-        console.log(typedInput)
+        this.matchPhrase()
+        
     }
     //create a function to check if the phrase matches the input
+    matchPhrase() {
+        const selectedPhrase = document.getElementById('selected').textContent.split("");
+        const inputPhrase = document.getElementById('keyInput').textContent.split("");
+        const check = inputPhrase.length - 1;
 
 
-    //end the game if the timer runs down to 0
+
+        //match the last index value of the inputPhrase to the same index number value of the selectedPhrase
+        if (inputPhrase[check] === selectedPhrase[check] && selectedPhrase.length === inputPhrase.length) {
+            
+            const resetSelected = document.getElementById('selected');
+            const resetInput = document.getElementById('keyInput');
+            const randomPhrase = this.getRandomPhrase().phrase;
+            
+            //resets selectedPhrase
+            resetSelected.textContent = '';
+            this.activePhrase = new Phrase(randomPhrase);
+            this.activePhrase.addPhraseToDisplay();
+
+
+            //resets inputPhrase
+            this.input = [];
+            resetInput.textContent = '';
+
+
+
+            this.rounds += 1;
+
+
+            console.log(this.rounds)
+            console.log('you win!')
+
+        } else if (inputPhrase[check] !== selectedPhrase[check]) {
+            console.log('you lose')
+        } 
+        
+    }
+
+    //resets the game based on timer running or typo
+    gameOver(bool) {
+        if (bool) {
+
+        } else {
+
+        }
+    }
 
     //reset the game
 

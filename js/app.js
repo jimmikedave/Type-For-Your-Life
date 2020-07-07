@@ -14,11 +14,20 @@ resetButton.addEventListener('click', e => game.startGame())
 //Add a keyboard press down function
 document.addEventListener('keydown', e => {
      for(i = 0; i< keyboard.length; i += 1)
-    if (e.key === keyboard[i].textContent) {
-        game.inputArray(keyboard[i].textContent)
-     } else if (e.key === " " && keyboard[i].textContent === " ") {
-        game.inputArray(keyboard[i].textContent)
-     }
+        if (e.key === keyboard[i].textContent) {
+            game.inputArray(keyboard[i].textContent)
+            keyboard[i].style.backgroundColor = "red";
+        } else if (e.key === " " && keyboard[i].textContent === " ") {
+            game.inputArray(keyboard[i].textContent)
+            keyboard[i].style.backgroundColor = "red";
+        }
  })    
 
-
+document.addEventListener('keyup', e => {
+    for(i = 0; i< keyboard.length; i += 1)
+        if (e.key === keyboard[i].textContent) {
+            keyboard[i].style.backgroundColor = "white";
+        } else if (e.key === " " && keyboard[i].textContent === " ") {
+            keyboard[i].style.backgroundColor = "white";
+        }
+})
