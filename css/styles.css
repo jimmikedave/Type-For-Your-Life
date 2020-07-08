@@ -20,7 +20,7 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -67,7 +67,7 @@ button {
 
 .main-container {
   background-color: skyblue;
-  border: 10px groove coral;
+  border: 10px inset #3a3f58;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -132,8 +132,9 @@ button {
   justify-content: center;
 }
 
+
 .key:hover {
-  box-shadow: 2px 2px coral;
+  box-shadow: 2px 2px darkred;
 }
 
 .chosen {

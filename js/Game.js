@@ -62,6 +62,9 @@ class Game {
         const startScreen = document.getElementById('overlay');
         const randomPhrase = this.getRandomPhrase().phrase;
         const subTitle = document.getElementById('sub-title');
+        const backgroundColor = document.getElementById('main-container');
+
+        backgroundColor.style.backgroundColor = 'skyblue';
 
         subTitle.textContent = '';
         startScreen.style.display = 'none';
@@ -139,6 +142,9 @@ class Game {
            const resetInput = document.getElementById('keyInput');
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
+           const backgroundColor = document.getElementById('main-container');
+
+           backgroundColor.style.backgroundColor = 'darkred';
 
            //disable game
            this.gameActive = false;
@@ -167,12 +173,16 @@ class Game {
            const resetInput = document.getElementById('keyInput');
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
+           const backgroundColor = document.getElementById('main-container');
+
+           backgroundColor.style.backgroundColor = 'darkred';
 
            //disable game
            this.gameActive = false;
 
            //stop timer
            clearTimeout(this.timer)
+           
 
            const youLose = () => {
                timeoutScreen.style.display = '';
