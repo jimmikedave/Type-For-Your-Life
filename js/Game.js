@@ -143,6 +143,9 @@ class Game {
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
            const backgroundColor = document.getElementById('main-container');
+           const how = document.getElementById('how');
+
+           how.style.display = 'none';
 
            backgroundColor.style.backgroundColor = 'darkred';
 
@@ -166,7 +169,7 @@ class Game {
            setTimeout(youLose, 2000)
             
         } else {
-            const timeoutScreen = document.getElementById('overlay');
+           const timeoutScreen = document.getElementById('overlay');
            const loseMessage = document.getElementsByClassName('title')[0];
            const surviveMessage = document.getElementById('game-over-message');
            const rstButton = document.getElementById('btn__reset');
@@ -174,6 +177,9 @@ class Game {
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
            const backgroundColor = document.getElementById('main-container');
+           const how = document.getElementById('how');
+
+           how.style.display = 'none';
 
            backgroundColor.style.backgroundColor = 'darkred';
 
