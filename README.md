@@ -1,2 +1,2 @@
-# Typing-game
+# Type-For-Your-Life
  OOP Game
