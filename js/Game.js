@@ -193,7 +193,7 @@ class Game {
            const youLose = () => {
                timeoutScreen.style.display = '';
                loseMessage.textContent = 'GAME OVER';
-               subTitle.textContent = 'YOU RAN OF TIME'
+               subTitle.textContent = 'YOU RAN OUT OF TIME'
                surviveMessage.textContent = `You survived ${survived} round(s).`
                rstButton.textContent = 'Try Again?';
                this.input = [];
