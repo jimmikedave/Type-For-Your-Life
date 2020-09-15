@@ -38,8 +38,8 @@ class Game {
             time: 6000
             },
             {
-            phrase: 'sun or shine by tydon',
-            time: 4000
+            phrase: 'i cant believe its not butter',
+            time: 5000
             }
         ];
         this.input = [];
