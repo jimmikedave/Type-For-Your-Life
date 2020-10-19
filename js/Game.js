@@ -92,7 +92,7 @@ class Game {
             
             keyInput.textContent = typedInput;
             this.matchPhrase()
-            console.log(this.input)
+            // console.log(this.input)
         }
         
     }
@@ -126,7 +126,7 @@ class Game {
 
             this.rounds += 1;
 
-            console.log('round(s) won:' + this.rounds)
+            // console.log('round(s) won:' + this.rounds)
 
         } else if (inputPhrase[check] !== selectedPhrase[check]) {
             this.gameOver(true)
