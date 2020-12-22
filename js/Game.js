@@ -2,44 +2,48 @@ class Game {
     constructor() {
         this.phrases = [
             {
-            phrase: 'someone please revive me',
-            time: 5000
+                phrase: 'someone please revive me',
+                time: 5000
             },
             {
-            phrase: 'i lost my gulag',
-            time: 4000
+                phrase: 'i lost my gulag',
+                time: 4000
             },
             {
-            phrase: 'do you want some soup',
-            time: 4000
+                phrase: 'do you want some soup',
+                time: 4000
             },
             {
-            phrase: 'thats a good doge',
-            time: 4000
+                phrase: 'thats a good doge',
+                time: 4000
             },
             {
-            phrase: 'console log',
-            time: 3000
+                phrase: 'console log',
+                time: 3000
             },
             {
-            phrase: 'my potions are too strong for you traveler',
-            time: 8000
+                phrase: 'asdflkj',
+                time: 3000
             },
             {
-            phrase: 'i am going into battle',
-            time: 5000
+                phrase: 'my potions are too strong for you traveler',
+                time: 8000
             },
             {
-            phrase: 'ill take a potato chip and eat it',
-            time: 5000
+                phrase: 'i am going into battle',
+                time: 5000
             },
             {
-            phrase: 'bourgeois why would you care for more',
-            time: 6000
+                phrase: 'ill take a potato chip and eat it',
+                time: 5000
             },
             {
-            phrase: 'i cant believe its not butter',
-            time: 5000
+                phrase: 'qqqpppzzzmmm',
+                time: 6000
+            },
+            {
+                phrase: 'i cant believe its not butter',
+                time: 5000
             }
         ];
         this.input = [];
@@ -62,9 +66,9 @@ class Game {
         const startScreen = document.getElementById('overlay');
         const randomPhrase = this.getRandomPhrase().phrase;
         const subTitle = document.getElementById('sub-title');
-        const backgroundColor = document.getElementById('main-container');
+        const backgroundColor = document.getElementsByTagName('BODY')[0];
 
-        backgroundColor.style.backgroundColor = 'skyblue';
+        backgroundColor.style.backgroundColor = 'black';
 
         subTitle.textContent = '';
         startScreen.style.display = 'none';
@@ -94,7 +98,6 @@ class Game {
             this.matchPhrase()
             // console.log(this.input)
         }
-        
     }
 
     //create a function to check if the phrase matches the input
@@ -142,12 +145,12 @@ class Game {
            const resetInput = document.getElementById('keyInput');
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
-           const backgroundColor = document.getElementById('main-container');
+           const backgroundColor = document.getElementById('main-container'); 
            const how = document.getElementById('how');
-
+           
            how.style.display = 'none';
 
-           backgroundColor.style.backgroundColor = 'darkred';
+           backgroundColor.style.backgroundSize = '0 0';
 
            //disable game
            this.gameActive = false;
@@ -164,6 +167,8 @@ class Game {
                this.input = [];
                resetInput.textContent = '';
                this.rounds = 0;
+               typoScreen.classList.remove('start')
+               typoScreen.classList.add('game-over')
            }
 
            setTimeout(youLose, 2000)
@@ -176,12 +181,12 @@ class Game {
            const resetInput = document.getElementById('keyInput');
            const subTitle = document.getElementById('sub-title');
            const survived = this.rounds;
-           const backgroundColor = document.getElementById('main-container');
+           const backgroundColor = document.getElementById('main-container'); 
            const how = document.getElementById('how');
 
            how.style.display = 'none';
 
-           backgroundColor.style.backgroundColor = 'darkred';
+           backgroundColor.style.backgroundSize = '0 0';
 
            //disable game
            this.gameActive = false;

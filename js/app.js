@@ -1,18 +1,23 @@
 /* JimMikeDave
 Beat the Timer */
 
+
 const game = new Game();
 const resetButton = document.getElementById('btn__reset');
 const keyboard = document.getElementsByClassName('key');
 const startScreen = document.getElementById('overlay');
 const spaceBar = document.getElementById('space');
+const mainContainer = document.getElementById('main-container');
 
 spaceBar.style.display = 'none';
 
 /*
 Removes the overlay to start the game
 */
-resetButton.addEventListener('click', e => game.startGame())
+resetButton.addEventListener('click', e => {
+    game.startGame()
+    mainContainer.style.backgroundSize = '100%'
+})
 
 
 //Add a keyboard press down function

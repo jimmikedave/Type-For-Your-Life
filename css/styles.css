@@ -4,11 +4,11 @@
 /* Variables */
 
 :root {
-  --color-win: #78CF82;
+  /* --color-win: #78CF82;
   --color-lose: #D94545;
   --color-start: #5b85b7;
   --color-neutral: #445069;
-  --color-neutral-light: #D2D2D2;
+  --color-neutral-light: #D2D2D2; */
   --color-keys: #37474F;
   --color-keys-light: #f5f1f1;
   --font-size-large: 60px;
@@ -66,8 +66,9 @@ button {
 }
 
 .main-container {
-  background-color: skyblue;
-  border: 10px inset #3a3f58;
+  background-image: url('../images/speed.jpg');
+  background-size: 100%; 
+  border: 10px dashed #000000;  
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -85,13 +86,6 @@ button {
   margin-top: 15px;
 }
 
-/* Title */
-
-.header {
-  color: #3a3f58;
-}
-
-
 /* Phrase */
 
 .letter {
@@ -105,21 +99,6 @@ button {
   border-radius: 5px;
 }
 
-
-.show {
-  color: #fff;
-  background-color: #4ac0d5;
-  font-size: 20px;
-  height: 65px;
-  width: 65px;
-  padding: 20px 1px 0 1px;
-  margin-right: 2px;
-  border-radius: 5px;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-}
-
-
 /* Keyboard */
 
 .keyrow {
@@ -132,17 +111,10 @@ button {
   box-shadow: 2px 2px darkred;
 }
 
-.chosen {
-  background: #3a3f58;
-  border-radius: 5px;
-  font-size: var(--font-size-medium);
-  color: #FFFFFF;
-}
-
-.wrong {
+/* .wrong {
   background: #f7a964;
   color: #FFFFFF;
-}
+} */
 
 .btn__reset {
   padding: 16px;
@@ -163,9 +135,9 @@ button {
 
 /* Lives */
 
-.tries:hover{
+/* .tries:hover{
   transform: scale(1.1);
-}
+} */
 
 /* Overlay */
 
@@ -187,25 +159,23 @@ button {
 }
 
 .start {
-  background-color: #3a3f58;
+  background: url('../images/mr2-1993.jpg') no-repeat center;
+  background-size: 100%;
 }
 
 .start a {
   color: #fff;
 }
 
-.win {
-  background-color: var(--color-win);
+.game-over {
+  background: url('../images/crash.jpg') no-repeat center;
+  background-size: 100%;
 }
 
-.win a {
-  color: var(--color-win);
+#selected {
+  color: white;
 }
 
-.lose {
-  background-color: #f5785f;
-}
-
-.lose a {
-  color: var(--color-lose);
+#keyInput {
+  color: white;
 }
